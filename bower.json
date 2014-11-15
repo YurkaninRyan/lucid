@@ -1,0 +1,19 @@
+{
+  "name": "lucid",
+  "main": "index.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/YurkaninRyan/hackrpi2014",
+  "authors": [
+    "Ryan Yurkanin"
+  ],
+  "description": "Essay Improvement Web Application",
+  "license": "GNU",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
