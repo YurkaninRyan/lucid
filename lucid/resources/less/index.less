@@ -1,0 +1,44 @@
+@white: #FFFFFF;
+@light-blue: #29C8D6;
+@blue: #31A9D6;
+@dark-blue: #3281D7;
+html{
+    width: 100%;
+    height: 100%;
+body {
+    background-color: @white;
+    margin: 0px;
+    
+    #maincontent {
+        height: 100%;
+        background-image: url(../resources/img/404bg.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        #banner {
+            background-image: url(../resources/img/logo.png);
+            height: 144px;
+            background-color: @white;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 0px;
+            position: relative;
+            transition: opacity 0.5s
+        }
+        
+        #input {
+            align-content: center;
+            padding-top: 50px;
+            margin-right: 10%;
+            margin-left: 10%;
+            
+            input[type="text"]{
+                width: 100%;
+                height: 60%;
+            }
+        }
+    }
+}
+}
+    
