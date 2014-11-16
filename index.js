@@ -4,6 +4,8 @@ var express = require('express'),
     lucid = express();
 
 lucid.set('port', process.env.PORT);
+lucid.set('views', __dirname + '/lucid/resources/html')
+lucid.set('view engine', 'ejs')
 
 lucid.use(express.static('lucid'));
 
@@ -15,10 +17,6 @@ lucid.get('/', function(req, res) {
 
 lucid.get('/essayresponse', function(req, res) {
     res.status(200).sendFile(path.join(__dirname, 'lucid', 'dist', 'pages', 'essayresponse.html'));
-});
-
-lucid.get('/admin', function(req, res) {
-    res.status(200).sendFile(path.join(__dirname, 'lucid', 'dist', 'pages', 'troll.html'));
 });
 
 lucid.get('/*', function(req, res) {
@@ -52,6 +50,7 @@ lucid.post('/essayresponse', function(req, res) {
             last += txt[j] + ' ';
         }
     }
+    res.render('essayresponse', { 'last': last });
     console.log(last);
     console.log("This essay is " + arraylen +" words long");
 });

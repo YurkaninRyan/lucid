@@ -40,8 +40,8 @@ gulp.task('less', function() {
     .pipe(gulp.dest('lucid/dist/'));
 });
 
-gulp.task('html', function() {
-   return gulp.src(['lucid/resources/html/*.html'])
+gulp.task('ejs', function() {
+   return gulp.src(['lucid/resources/html/*.ejs'])
         .pipe(gulp.dest('lucid/dist/pages'));
 });
 
