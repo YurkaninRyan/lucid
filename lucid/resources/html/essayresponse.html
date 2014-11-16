@@ -1,0 +1,42 @@
+<!DOCTYPE HTML5>
+<html class="loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Essay Writing Helper">
+        <meta name="author" content="Ryan Yurkanin">
+        <meta name="keywords" content="essay, help, synonym, tool">
+        <link href="/dist/index.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../resources/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../resources/img/favicon.ico" type="image/x-icon">
+        <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    
+        <title>Lucid|Easy Essay</title
+    </head>
+    <body>
+        <section class="loadingcont">
+        <div class="circle"></div>
+        <div class="circle-small"></div>
+        <div class="circle-big"></div>
+        <div class="circle-inner-inner"></div>
+        <div class="circle-inner"></div>
+        </section>
+        <section id="maincontent">
+            <section id="banner"></section>
+            <section id="input">
+                <form action="/essayresponse" method="POST">
+                    <textarea id="essay" name="essay" rows="30" cols="50" wrap="logical" placeholder="                                           Let us take a look at that for you!"></textarea>
+                <button class="submit-button">Submit</button>
+                </form>
+            </section>
+        </section>
+            <script src="vendor/jquery/dist/jquery.min.js"></script>
+            <script src="dist/js/lucid.min.js"></script>
+            <script>
+            setTimeout(function() {
+                $("html").removeClass("loading");
+            }, 2000); 
+            </script>
+    </body>
+</html>

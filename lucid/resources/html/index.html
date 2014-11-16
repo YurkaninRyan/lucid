@@ -10,6 +10,7 @@
         <link href="/dist/index.css" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" href="../resources/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="../resources/img/favicon.ico" type="image/x-icon">
+        <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
     
         <title>Lucid|Easy Essay</title
     </head>
@@ -24,12 +25,14 @@
         <section id="maincontent">
             <section id="banner"></section>
             <section id="input">
-                <form>
-                    <input type="text"></input>
+                <form action="/essayresponse" method="POST">
+                    <textarea id="essay" name="essay" rows="30" cols="50" wrap="logical" placeholder="                                           Let us take a look at that for you!"></textarea>
+                <button class="submit-button">Submit</button>
                 </form>
             </section>
         </section>
-             <script src="vendor/jquery/dist/jquery.min.js"></script>
+            <script src="vendor/jquery/dist/jquery.min.js"></script>
+            <script src="dist/js/lucid.min.js"></script>
             <script>
             setTimeout(function() {
                 $("html").removeClass("loading");
