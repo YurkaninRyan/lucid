@@ -34,18 +34,16 @@ html{
     -webkit-transition: background-color 1s;
     transition: background-color 1s;
     
-    [placeholder]:focus::-webkit-input-placeholder {
+   :focus::-webkit-input-placeholder {
         color: @light-blue;
         transition: color 0.5s 0.5s ease, opacity 0.5s 0.5s ease;
         color: @blue;
         opacity: 0;
     }
     
-    [placeholder]::-webkit-input-placeholder {
-        opacity 1;
-        transition: color 0.5s 0.5s ease, opacity 0.5s 0.5s ease;
+    ::-webkit-input-placeholder {
+        transition: color 0.5s 0.5s ease;
         color: @light-blue;
-        opacity 0;
     }
     
     body {
@@ -246,42 +244,12 @@ html{
                 margin-left: 10%;
                 opacity: 1.0;
                 transition: opacity @loading-fade-duration;
-                    
-                button {
-                    display: block;
-                    width: 340px;
-                    margin: 0 auto;
-                    text-decoration: none;
-                    color: @light-blue;
-                    background-color: @white;
-                    font-family: 'Volkorn', serif;
-                    font-size: 26px;
-                    font-weight: 600;
-                    margin-top: 20px;
-                    text-transform: uppercase;
-                    outline: 0 none;
-                    border-width: 0px;
-                    transition: background-color 0.5s, color 0.5s;
-                    border-radius: 4px;
-                    padding: 10px;
-                    text-align: center;
-                    cursor: pointer;
-
-                        &:hover {
-                            color: white;
-                            background-color: @light-blue;
-                        }
-
-                        &:active {
-                            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5) inset;
-                        }
-                    }
                 
                 form {
                     margin: 0;
                     padding: 0;
-                
-                    #essayspot{
+                    
+                    #essay {
                         height: 60%;
                         width: 100%;
                         font-size: 28px;
@@ -289,9 +257,39 @@ html{
                         color: @blue;
                         font-family: 'Volkorn', serif;
                     }
+                    
+                    button {
+                        display: block;
+                        width: 340px;
+                        margin: 0 auto;
+                        text-decoration: none;
+                        color: @light-blue;
+                        background-color: @white;
+                        font-family: 'Volkorn', serif;
+                        font-size: 26px;
+                        font-weight: 600;
+                        margin-top: 20px;
+                        text-transform: uppercase;
+                        outline: 0 none;
+                        border-width: 0px;
+                        transition: background-color 0.5s, color 0.5s;
+                        border-radius: 4px;
+                        padding: 10px;
+                        text-align: center;
+                        cursor: pointer;
+
+                            &:hover {
+                                color: white;
+                                background-color: @light-blue;
+                            }
+
+                            &:active {
+                                box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5) inset;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
-}
     
