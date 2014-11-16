@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     livereload = require('gulp-livereload'),
     filesize = require('gulp-filesize'),
-    gutil = require('gulp-util')
+    gutil = require('gulp-util');
     
 var delay = function(fn, time) {
     return function() {
@@ -27,7 +27,7 @@ gulp.task('lucid-run', function() {
 });
 
 gulp.task('less', function() {
-   gulp.src(['lucid/resources/less/indexless'])
+   gulp.src(['lucid/resources/less/index.less'])
     .pipe(less())
     .pipe(gulp.dest('lucid/dist/'));
     
@@ -61,7 +61,7 @@ gulp.task('js', function() {
 gulp.task('watch', ['lucid-run'], function() {
     livereload.listen();
     gulp.watch('lucid/resources/js/*.js', ['js']).on('change', livereload.changed);
-    gulp.watch('lucid/resources/less/*.less', ['less']).on('change', delay(livereload.changed, 500));
+    gulp.watch('lucid/resources/less/*.less', ['less']).on('change', livereload.changed);
     gulp.watch('lucid/resources/html/*.html', ['html']).on('change', livereload.changed);
 });
 

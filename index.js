@@ -4,6 +4,8 @@ var express = require('express'),
 
 lucid.set('port', process.env.PORT);
 
+lucid.use(express.static('lucid'));
+
 lucid.get('/', function(req, res) {
     res.status(200).sendFile(path.join(__dirname, 'lucid', 'dist', 'pages', 'index.html'));
 });
