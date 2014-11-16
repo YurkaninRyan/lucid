@@ -36,7 +36,11 @@
   },
   "dependencies": {
     "express": "^4.9.8",
+    "mongodb": "^1.4.20",
+    "mongoose": "^3.8.19",
     "request": "^2.45.0",
-    "simple-text-parser": "^0.1.2"
+    "require": "^2.4.17",
+    "simple-text-parser": "^0.1.2",
+    "thesaurus": "0.0.0"
   }
 }

@@ -21,3 +21,11 @@ lucid.get('/*', function(req, res) {
 lucid.listen(lucid.get('port'), function() {
     console.log('Express server listening on port %d in %s mode', lucid.get('port'), lucid.get('env'));
 });
+
+lucid.post('/essayresponse');
+console.log("works");
+
+var thesaurus = require("thesaurus");
+var updated_thesaurus = thesaurus.load("./th_en_US_new.dat");
+
+console.log(thesaurus.find("sad"));
