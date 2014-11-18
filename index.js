@@ -50,7 +50,7 @@ lucid.post('/essayresponse', function(req, res) {
             last += txt[j] + ' ';
         }
     }
-    res.render('essayresponse', { 'last': last });
+    res.render('essayresponse', { 'last': last, 'length': arraylen });
     console.log(last);
     console.log("This essay is " + arraylen +" words long");
 });
